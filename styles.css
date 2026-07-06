@@ -26,6 +26,11 @@ h1 {
     padding: 10px;
 }
 
+#ul {
+    margin: 10px;
+    padding: 10px;
+}
+
 #nav {
     display: flex;
     list-style: none;

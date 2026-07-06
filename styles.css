@@ -1,0 +1,115 @@
+body {
+    font-family: Arial;
+    background-color: rgb(250, 250, 250);
+}
+
+h1 {
+    font-family: "Segoe UI", sans-serif;
+    color: rgb(16, 11, 168);
+    text-align: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "header header"
+        "aside mainContent"
+        "footer footer";
+}
+
+#header {
+    grid-area: header;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+#main {
+    grid-area: mainContent;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.textInput {
+    margin: 5px;
+    padding: 5px;
+}
+
+.cardDetails {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+#checkOwner {
+    display: none;
+}
+
+#checkOwner.visible {
+    display: inline-block;
+}
+
+.buttons {
+    margin: 5px;
+    padding: 5px;
+}
+
+.newOwnerForm {
+    display: none;
+}
+
+.newOwnerForm.visible {
+    border: 1px solid black;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+}
+
+#aside {
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+#images {
+    width: 100px;
+    height: 100px;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+            "header header"
+            "mainContent mainContent"
+            "aside footer";
+    }
+
+    #nav {
+        list-style: none;
+    }
+}
